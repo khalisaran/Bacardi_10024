@@ -1,0 +1,21 @@
+version: '2'
+services:
+  db:
+    container_name: Bacardi-10024-db
+    build: db
+    image: bacardi-10024/db
+    ports:
+      - "32657:3306"
+  web:
+    depends_on:
+      - db
+
+    container_name: Bacardi-10024-web
+    build: desktop
+    image: bacardi-10024/web
+    links:
+      - db:mydb
+
+    ports:
+      - "9090:8080"
+    entrypoint: ./wait-for-it.sh -t 180 --strict mydb:3306 -- java -jar Bacardi_10024.jar

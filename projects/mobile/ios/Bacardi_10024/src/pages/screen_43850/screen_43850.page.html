@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="navbar-header">
+        <button ion-button menuToggle icon-only>
+            <ion-icon name="menu" color="primary">
+            </ion-icon>
+        </button>
+        <ion-title>
+            Screen_43850
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+<ion-row style="padding-top: 105px">
+<ion-col col-2 offset-1>
+<ion-item>
+<label>
+Label
+</label>
+</ion-item>
+
+</ion-col>
+<ion-col col-7 offset-1>
+<ion-item>
+<ion-input placeholder=Input [(ngModel)]='Bacardi.price'></ion-input>
+</ion-item>
+
+</ion-col>
+</ion-row>
+<ion-row style="padding-top: 39px">
+<ion-col col-2 offset-1>
+<ion-item>
+<label>
+Label
+</label>
+</ion-item>
+
+</ion-col>
+<ion-col col-7 offset-1>
+<ion-item>
+<ion-input placeholder=Input [(ngModel)]='Bacardi.quantity'></ion-input>
+</ion-item>
+
+</ion-col>
+</ion-row>
+<ion-row style="padding-top: 67px">
+<ion-col col-3 offset-3>
+<button ion-button (click)="createBacardi()">
+Button</button>
+
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>
